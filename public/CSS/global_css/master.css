@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    background: white;
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: 'PT Serif', serif;
+    position: relative;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p{
+  margin: 5px;
+}
+
+input:focus,
+button:focus,
+select:focus {
+    outline: none;
+}
+
+#alertText{
+  padding: 10px 0;
+  display: block;
+}
+
+li{
+  list-style: none;
+}
+
+/* form master styles */
+
+form label{
+   font-size: 1.2rem;
+   padding: 5px 5px;
+}
+
+form input,
+form textarea{
+  padding: 10px 10px;
+  border-radius: 25px;
+  border: solid 1px silver;
+  min-width: 290px;
+  min-height: 20px;
+  text-align: left;
+}
+#Bavcolor{
+  border: none;
+  border-radius: 0%;
+  padding: 0;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+
+/* master BUttons styles*/
+
+form button{
+  padding: 10px 5px;
+  border-radius: 25px;
+  border: solid 1px silver;
+  max-width: 200px;
+}
+
+/* var(--main-bg-color); */
+:root{
+    --Master_Background-: rgb(0, 0, 0);
+    --Master_Background_2-: linear-gradient(to bottom, #060606, #0e0e0e, #141414, #191919, #1e1e1e, #232323, #282828, #2d2d2d, #343434, #3a3a3a, #414141, #484848);
+}
+
+
+/* MASTER CONTAINER */
+
+.master_container{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+}

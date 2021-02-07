@@ -1,0 +1,42 @@
+<!-- head -->
+<%- include("../inlcudes/global/head.ejs") %> 
+<link rel="stylesheet" href="../../CSS/blog_css/blogSpecial.css">
+</head>
+
+    <body>
+
+        
+        <header>
+
+            <%- include("../inlcudes/global/topNav.ejs") %> 
+
+            <div style="height: 50vh; background:<%= blogData.backgroundColor %>;">
+                <%= blogData.title %>
+            </div>
+
+        </header>
+
+        <div class="master_container" style="display: inline-block; text-align: center;">
+
+            <div class="top_header_wrap">
+                <h3><%= blogData.title %></h3>  
+                <h5>
+                    <small>created : (<%= blogData.createDate.toLocaleDateString() %>) </small>
+                    creator : <%= blogData.author.name %>
+                </h5>
+                             
+            </div>
+
+            <div class="markdown_wrap">
+                <p>
+                    <%- blogData.text %>
+                </p>
+            </div>
+
+
+        </div>
+
+        <%- include("../inlcudes/global/scripts.ejs") %> 
+    </body>
+
+</html>

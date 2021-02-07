@@ -1,0 +1,28 @@
+/* form */
+.wrap_blog_form{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+    .form_group{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+    .form_button_wrap{
+        display: flex;
+        flex-direction: row;
+    }
+
+/* mirr wrap */
+
+.mirr_wrap{
+    border: solid 2px black;
+    min-height: 300px;
+    min-width: 50%;
+    max-width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+
+/* text size */
+.size1{font-size: 1.2rem;}
+.size2{font-size: 1.5rem;}
+.size3{font-size: 2rem;}
+.size4{font-size: 2.2rem;}
+.size5{font-size: 2.5rem;}
+.size6{font-size: 3rem;}
+
+/* font weight */
+.lighter{font-weight: lighter;}
+.bold{font-weight: bold;}
+.bolder{font-weight: bolder;}
+
+/* word spacing */
+.letterSP1{letter-spacing: 0.1rem;}
+.letterSP2{letter-spacing: 0.2rem;}
+.letterSP3{letter-spacing: 0.3rem;}
+.letterSP4{letter-spacing: 0.4rem;}
+.letterSP5{letter-spacing: 0.5rem;}
+.letterSP6{letter-spacing: 0.6rem;}
+
+
+/* font styles */
+.italic{font-style: italic;}
+.oblique{font-style: oblique;}
+
+
+/* font family */
+.serif{font-family: "Times New Roman", Times, serif;}
+.sans{font-family: Arial, Helvetica, sans-serif;}
+.monospace{font-family: "Lucida Console", "Courier New", monospace;}
+.cursive{font-family: cursive;}
+.fantasy{font-family: fantasy;}
+
+
+
+
+
+
+
+
+
+
+/* color */
+
+.red{
+    color: red;
+}

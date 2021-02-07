@@ -1,0 +1,50 @@
+<!-- head -->
+<%- include("./inlcudes/global/head.ejs") %> 
+
+</head>
+
+    <body>
+
+        
+        <header>
+
+            <%- include("./inlcudes/global/topNav.ejs") %> 
+
+        </header>
+        
+
+        <div class="master_container">
+
+            <form action="/register" method="post">
+
+                <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+
+                <label for="RaccesKey">Access key</label>
+                <input type="text" name="RaccesKey" id="RaccesKey">
+
+                <label for="Rname">Name</label>
+                <input type="text" name="Rname" id="Rname">
+
+                <label for="RlastName">Last name</label>
+                <input type="text" name="RlastName" id="RlastName">
+
+                <label for="Remail">Email</label>
+                <input type="email" name="Remail" id="Remail">
+                
+                <label for="Rpassword">Password</label>
+                <input type="text" name="Rpassword" id="Rpassword">
+
+                <label for="RveryfyPassword">Verify Password</label>
+                <input type="text" name="RveryfyPassword" id="RveryfyPassword">
+
+                <input type="submit" value="Submit">
+            
+            </form>            
+            
+        </div><!-- End of master container -->
+
+        <%- include("./inlcudes/global/scripts.ejs") %> 
+        
+    </body>
+
+</html>

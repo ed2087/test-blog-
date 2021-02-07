@@ -1,0 +1,75 @@
+<!-- head -->
+<%- include("../inlcudes/global/head.ejs") %> 
+<link rel="stylesheet" href="../../CSS/blog_css/blogSpecial.css">
+</head>
+
+    <body>
+
+        
+        <header>
+
+            <%- include("../inlcudes/global/topNav.ejs") %> 
+
+        </header>
+        
+
+        <div class="master_container">
+
+
+            <div class="blog_wrap">
+
+                <% if(blogData) {%> 
+
+                    <% blogData.forEach(blog => {%>
+                        
+                        
+                        <div style="background:<%= blog.backgroundColor %>; min-height: 50px;" class="box_header">
+                            <%= blog.title %>
+                        </div>                       
+
+                        <div><%= blog.title %></div>
+
+                        <div id="blogText"><%= blog.description.substring(0, 500) %></div>
+
+                        <div class="blog_Button_wrap">
+
+                            <div class="blog_inner_buttonWrap">
+                                <form action="/blog/<%= blog._id %>" method="post">
+                                    <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                    <button type="submit">Read More</button>
+                                </form>
+                            </div>
+                           
+                            <% if(userData){%>
+
+                                    <div class="blog_inner_buttonWrap">
+                                        <form action="/adminBlogPage/<%= blog._id %>" method="post">
+                                            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                            <button type="submit">Edit</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="blog_inner_buttonWrap">
+                                        <form action="/deleteBlog/<%= blog._id%>" method="post">
+                                            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </div>
+
+                            <% } %> 
+                             
+                        </div>
+
+                    <%}); %> 
+
+                <% } %>                 
+            
+            </div>
+            
+        </div><!-- End of master container -->             
+        
+        <%- include("../inlcudes/global/scripts.ejs") %> 
+        
+    </body>
+
+</html>

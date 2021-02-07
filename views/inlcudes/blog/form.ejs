@@ -1,0 +1,57 @@
+<form class="wrap_blog_form" action="<%= blogData.title == null ? "/createBlog" :"/updateBlog/"+blogData._id%>" method="post">   
+
+    <div class="form_group">
+        <label for="Btitle">Title</label>
+        <input required type="text" name="Btitle" id="Btitle" placeholder="hello" value="<%= blogData.title != null ? blogData.title : "" %>">
+    </div>
+
+    <div class="form_group">
+        <label for="Bdescription">Description</label>
+        <input required type="text" name="Bdescription" id="Bdescription" value="<%= blogData.description != null ? blogData.title : "" %>">
+    </div>
+
+    <div class="form_group">
+        <label for="Bavcolor">Background Color</label>
+        <input required type="color" id="Bavcolor" name="Bavcolor"  value="<%= blogData.title != null ? blogData.backgroundColor : "#5A6351" %>">
+    </div>
+   
+    <div class="form_group">
+
+        <label for="BMarkDown">MarkDown</label>
+        <textarea 
+            autocomplete="on"
+             autocorrect="on"
+              autocapitalize="on"
+               spellcheck="true"
+                required name="BMarkDown"
+                 id="BMarkDown" cols="30"
+                  rows="10">
+                  <%= blogData.title != null ? blogData.text : "" %>
+        </textarea>
+        <div class="settings_buttons">
+            <button data-sett="pTag" class="btn_sett fa fa-paragraph" aria-hidden="true"></button>
+            <button data-sett="h1Tag" class="btn_sett fa fa-header" aria-hidden="true">1</button>
+            <button data-sett="h2Tag" class="btn_sett fa fa-header" aria-hidden="true">2</button>
+            <button data-sett="h3Tag" class="btn_sett fa fa-header" aria-hidden="true">3</button>
+            <button data-sett="aTag" class="btn_sett fa fa-link" aria-hidden="true"></button>            
+            <button data-sett="spanTag" class="btn_sett">Span</button>
+            <button data-sett="hr" class="btn_sett">Line</button>
+            <button data-sett="br" class="btn_sett">Break</button>
+        </div>
+
+    </div> 
+    
+    <!-- <div class="form_group">
+        <a href="https://htmlcheatsheet.com/" target="_blank">exp-1</a>  
+        <a href="https://digital.com/tools/html-cheatsheet/" target="_blank">exp-2</a>    
+    </div> -->
+    <div class="form_group form_button_wrap">
+        <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+        <button type="submit"><%= blogData.title != null ? "Update Blog" : "Create Blog" %></button>
+        <button>Cancel</button>
+    </div>
+
+</form>
+
+<div class="mirr_wrap" id="mirr_w"></div>
+

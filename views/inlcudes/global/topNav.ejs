@@ -1,0 +1,39 @@
+
+
+<!-- global top navigation -->
+
+<nav class="Nav_Container">
+
+    <ul class="nav_list_wrap">
+
+        <li class="nav_list">
+            <a class="nav_link" href="/">Home</a>
+        </li>
+
+        <li class="nav_list">
+            <a class="nav_link" href="/blogs">Blog</a>
+        </li>        
+
+        <% if(!userData) {%>             
+            <li class="nav_list">
+                <a class="nav_link" href="/LogIn">LogIn</a>
+            </li>
+        <% }else{%>
+             
+            <% if(userData.userAuthority == "admin") {%> 
+
+                <li class="nav_list">
+                    <a class="nav_link" href="/adminBlogPage">Create Blog</a>
+                </li>
+
+            <% }%>
+
+            <li class="nav_list">
+                <a class="nav_link" href="/Logout">Logout</a>
+            </li>
+            
+        <% }%> 
+        
+    </ul>
+
+</nav>
